@@ -5,27 +5,24 @@ body
   padding: 15px;
 }
 
+img
+{
+  object-fit: cover;
+}
+
+main
+{
+  padding: 20px;
+}
+
 .card
 {
     margin: 0 auto;
 }
 
-#favorite_toys div
-{
-  text-align: center;
-}
-
-#favorite_toys img
-{
-  padding: 15px;
-  width: 300px;
-  height: 300px;
-  object-fit: cover;
-}
-
 section
 {
-  margin: 20px auto;
+  margin: 0 auto;
 }
 
 nav
@@ -43,7 +40,25 @@ footer img
 {
   margin-top: 20px;
   width: 50px;
+}
 
+video
+{
+  width: 419px;
+  height: 314px;
+  margin-top: 20px;
+}
+
+#favorite_toys div
+{
+  text-align: center;
+}
+
+#favorite_toys img
+{
+  padding: 15px;
+  width: 300px;
+  height: 300px;
 }
 
 @media screen and (min-width: 720px)
