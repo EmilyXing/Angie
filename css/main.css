@@ -15,11 +15,6 @@ main
   padding: 20px;
 }
 
-.card
-{
-    margin: 0 auto;
-}
-
 section
 {
   margin: 0 auto;
@@ -44,8 +39,17 @@ footer img
 
 video
 {
-  width: 419px;
-  height: 314px;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.card
+{
+    margin: 0 auto;
+}
+
+.story
+{
   margin-top: 20px;
 }
 
