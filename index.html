@@ -45,13 +45,17 @@
 
       <section id="favorite_foods">
         <h2>Favorite Food</h2>
-        <ul>
-          <li>salmon</li>
-          <li>lamb</li>
-          <li>chicken</li>
-          <li>beef</li>
-        </ul>
+        <p>
+          I have four favorite foods. Click each button to check out what it looks like!
+        </p>
+        <button type="button" class="btn btn-danger" rel="popover" data-img="imgs/lamb.png">Lamb</button>
+        <button type="button" class="btn btn-warning" rel="popover" data-img="imgs/salmon.png">Salmon</button>
+        <button type="button" class="btn btn-success" rel="popover" data-img="imgs/chicken.png">chicken</button>
+        <button type="button" class="btn btn-dark" rel="popover" data-img="imgs/beef.jpg">Beef</button>
+
       </section>
+
+
 
       <section id="favorite_toys">
         <h2>Favorite Toys</h2>
@@ -88,10 +92,9 @@
         <a href="imgs/20170103.jpg" data-toggle="lightbox">
                 <img src="imgs/20170103.jpg" alt="with_drone" class="img-fluid">
         </a>
-
-        </div>
       </section>
     </main>
+
     <footer>
       <div class="icons">
         <a href="https://www.facebook.com"><img src="imgs/facebook.png" alt="facebook icon" /></a>
@@ -104,11 +107,21 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.js" integrity="sha256-jGAkJO3hvqIDc4nIY1sfh/FPbV+UK+1N+xJJg6zzr7A=" crossorigin="anonymous"></script>
-    <script>$(document).on('click', '[data-toggle="lightbox"]', function(event) {
-                event.preventDefault();
-                $(this).ekkoLightbox();
-            });
-          </script>
+    <script>
+    $(document).on('click', '[data-toggle="lightbox"]', function(event)
+      {
+          event.preventDefault();
+          $(this).ekkoLightbox();
+      });
+    </script>
+    <script>
+    $('button[rel=popover]').popover({
+      html: true,
+      trigger: 'click',
+      placement: 'bottom',
+      content: function(){return '<img src="'+$(this).data('img') + '" />';}
+    });
+    </script>
 
   </body>
 </html>
