@@ -8,12 +8,12 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.css" integrity="sha256-HAaDW5o2+LelybUhfuk0Zh2Vdk8Y2W2UeKmbaXhalfA=" crossorigin="anonymous" />
-
+    <script src="js/index.js"></script>
     <link rel="stylesheet" href="css/main.css" />
-
-
+   
     <title>Angie Xing</title>
   </head>
+
   <body>
     <header>
       <div class="card" style="width: 18rem;">
@@ -48,10 +48,9 @@
         <p>
           I have four favorite foods. Click each button to check out what it looks like!
         </p>
-        <button type="button" class="btn btn-danger" rel="popover" data-img="imgs/lamb.png">Lamb</button>
-        <button type="button" class="btn btn-warning" rel="popover" data-img="imgs/salmon.png">Salmon</button>
-        <button type="button" class="btn btn-success" rel="popover" data-img="imgs/chicken.png">chicken</button>
-        <button type="button" class="btn btn-dark" rel="popover" data-img="imgs/beef.jpg">Beef</button>
+        <div class="btn_foods">
+
+        </div>
 
       </section>
 
@@ -103,10 +102,14 @@
       </div>
     </footer>
 
+    <script>
+        controller.init();
+    </script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.js" integrity="sha256-jGAkJO3hvqIDc4nIY1sfh/FPbV+UK+1N+xJJg6zzr7A=" crossorigin="anonymous"></script>
+   
     <script>
     $(document).on('click', '[data-toggle="lightbox"]', function(event)
       {
@@ -123,5 +126,6 @@
     });
     </script>
 
+    
   </body>
 </html>
