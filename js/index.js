@@ -29,15 +29,15 @@ var UIController = (function(){
 
     return {
         displayFoods: function(){
-            var str, newStr;
+            
             var str = '<button type="button" class="btn %type%" rel="popover" data-img="%img%">%value%</button> ';
 
-            foodList.forEach(function(cur){
-                newStr = str.replace('%type%', cur.type);
-                newStr = newStr.replace('%img%', cur.img);
-                newStr = newStr.replace('%value%', cur.content);
-                console.log(document.querySelector(DOMstrings.foods));
-                console.log(document.querySelector('.btn_foods'));
+            var newStr;
+            foodList.forEach(function(food){
+                newStr = str.replace('%type%', food.type);
+                newStr = newStr.replace('%img%', food.img);
+                newStr = newStr.replace('%value%', food.content);
+
                 document.querySelector(DOMstrings.foods).insertAdjacentHTML('beforeend', newStr);
             });
             
